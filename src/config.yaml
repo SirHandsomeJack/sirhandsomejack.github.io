@@ -11,7 +11,7 @@ metadata:
   title:
     default: SirHandsomeJack
     template: '%s — AstroWind'
-  description: "Jack Young is a game developer at Blue Gravity Studios working on the next generation sim game Little Sim World!"
+  description: 'Jack Young is a game developer at Blue Gravity Studios working on the next generation sim game Little Sim World!'
   robots:
     index: true
     follow: true

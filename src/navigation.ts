@@ -16,11 +16,8 @@ export const headerData = {
 };
 
 export const footerData = {
-  links: [
-  ],
-  secondaryLinks: [
-    { text: 'Privacy Policy', href: getPermalink('/privacy') },
-  ],
+  links: [],
+  secondaryLinks: [{ text: 'Privacy Policy', href: getPermalink('/privacy') }],
   socialLinks: [
     { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/sirhandsomejack' },
     { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://www.x.com/SirHandsomeJack' },
@@ -29,7 +26,5 @@ export const footerData = {
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/SirHandsomeJack' },
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
   ],
-  footNote: `
-    © 2024 Jack Young (SirHandsomeJack). All rights reserved.
-  `,
+  footNote: `© 2024 Jack Young (SirHandsomeJack). All rights reserved.`,
 };
