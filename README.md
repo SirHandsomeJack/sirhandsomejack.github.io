@@ -51,7 +51,7 @@
 
 ## Demo
 
-📌 [https://astrowind.vercel.app/](https://astrowind.vercel.app/)
+📌 [https://sirhandsomejack.github.io/](https://sirhandsomejack.github.io/)
 
 <br>
 
