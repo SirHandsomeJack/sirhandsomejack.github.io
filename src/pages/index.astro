@@ -1,0 +1,207 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+
+const metadata = {
+  title: 'SirHandsomeJack: Home | Game Developer',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero
+    id="hero"
+    title="Jack Young"
+    tagline="Game Developer"
+  >
+    <Fragment slot="subtitle">
+      Lead programmer for Little Sim World at Blue Gravity Studios.
+    </Fragment>
+  </Hero>
+
+  <!-- Content Widget **************** -->
+   
+  <Content
+    id="about"
+    image={{
+      src: '~/assets/images/logo.png',
+      alt: 'Profile Picture',
+      loading: 'eager',
+    }}
+  >
+    <Fragment slot="content">
+      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About me</h2>
+      <p>
+        Hi, my name is Jack Young, also known as SirHandsomeJack. I studied Computer Science at the University of Greenwich and graduated in 2018. In 2021, I joined a game development team which later became Blue Gravity Studios working on our next big hit Little Sim World.
+      </p>
+      <br/>
+      <p>
+        I have equal passion for creating and playing games. My favourite genre is RPG; I enjoy role playing characters and being able to create my own story with friends, it is my dream to be able to be a part of a development team, making a great adventure to share with other players.
+      </p>
+      <br/>
+      <p>
+        My favourite part when creating any software is experimenting with various creative ideas; for example, when playing other games, I always have this urge to express "I wish they did this or maybe they should have done that". So given the opportunity, I will be able to have the flexibility to implement these ideas that add more life to the game which makes it much more liberating when seeing other players enjoying the experience that I was involved in creating.
+      </p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    id="resume"
+    title="Experience"
+    items={[
+      {
+        title: 'Lead Programmer <br /> <span class="font-normal">Blue Gravity Studios, Remote, UK</span> <br /> <span class="text-sm font-normal">2021 - Present</span>',
+        description: `Develop flexible and scalable backend systems. <br /> Create functional user interfaces with accessibility features.`,
+        icon: 'tabler:briefcase',
+      },
+      {
+        title:
+          'Technical Support Assistant <br /> <span class="font-normal">GCIS (UK) Ltd, Stevenage, UK</span> <br /> <span class="text-sm font-normal">2014</span>',
+        description: `Solving technical issues and requests via phone/email. <br /> Troubleshooting and fixing machines swiftly. <br /> Clearly communicating customer issues with colleagues. <br /> Logging and updating tickets on system.`,
+        icon: 'tabler:briefcase',
+      },
+    ]}
+    classes={{ container: 'max-w-3xl' }}
+  />
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    id="resume"
+    title="Education"
+    items={[
+      {
+        title: `BSc Computer Science<br /> <span class="font-normal">University of Greenwich</span> <br /> <span class="text-sm font-normal">2015 - 2018</span>`,
+        icon: 'tabler:school',
+      },
+      {
+        title: `A-Level & GCSEs <br /> <span class="font-normal">The Nobel School</span> <br /> <span class="text-sm font-normal">2008 - 2015</span>`,
+        icon: 'tabler:school',
+      },
+    ]}
+    classes={{ container: 'max-w-3xl' }}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Skills"
+    columns={3}
+    defaultIcon="tabler:point-filled"
+    items={[
+      {
+        title: 'User-centered design',
+        description: 'Experienced in creating user-friendly interfaces and optimizing user experiences.',
+      },
+      {
+        title: 'Attention to detail',
+        description: 'Diligent in maintaining precision and quality in all design work.',
+      },
+      {
+        title: 'Adaptability',
+        description: 'Quick to adapt to new design trends, technologies, and client preferences.',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    id="projects"
+    title="Projects"
+    isReversed
+    image={{
+      src: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1429880/header.jpg?t=1725977168',
+      alt: 'Little Sim World Logo',
+    }}
+    callToAction={{
+      target: '_blank',
+      text: 'Go to the project',
+      icon: 'tabler:chevron-right',
+      href: '#',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Little Sim World
+      </h3>
+      <h4>You’ve arrived in a distant city, at the London airport. With some change and a key to your uncle’s old apartment, you begin your new life!</h4>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent={true}
+    image={{
+      src: 'https://static.wixstatic.com/media/f7dba4_f622424442da4aadaf6935c2b35fb9d8~mv2.png/v1/fill/w_276,h_172,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/SuperBunnyHop%20(Logo).png',
+      alt: 'Super Bunny Hop Logo',
+    }}
+    callToAction={{
+      target: '_blank',
+      text: 'Go to the project',
+      icon: 'tabler:chevron-right',
+      href: '#',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Super Bunny Hop
+      </h3>
+      <h4>Hop to the top and do not drop! How high can you go in Super Bunny Hop?</h4>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="Recommendations"
+    subtitle="Discover what collegues have to say about their experiences working with me."
+    testimonials={[
+      {
+        testimonial: `Jack has an immaculate work ethic, has managed different systems and has fostered collaboration across the art and programming departments. He initiated improving the creation of art atlases and helped me establish proper importation of sprites to improve the art-to-programming development process. He is user-centric and always enhances the UI implementation and complex systems. Very knowledgeable about video games and is always ready to apply his learnings to the project - solving complex problems and leading the programming team to deliver quality work and hit deadlines with the utmost competence.`,
+        name: 'Ronnel Infante',
+        job: '2D Art Manager and UI Designer',
+        image: {
+          src: 'https://media.licdn.com/dms/image/v2/D5603AQGshVFOM9LomA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1720492351235?e=1733961600&v=beta&t=T-f-_oZcFLSHNd_BLeiSF8ggE44ABvpK5ZszF0L2i3I',
+          alt: 'Ronnel Infante Image',
+        },
+      },
+    ]}
+  />
+
+  <!-- BlogLatestPost Widget **************** -->
+
+  <BlogLatestPosts
+    id="blog"
+    title="Explore my insightful articles on my blog"
+    information={`Dive into a realm of design wisdom and creative inspiration, where you'll find invaluable insights, practical tips, and captivating narratives that elevate and enrich your creative journey.`}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </BlogLatestPosts>
+</Layout>
