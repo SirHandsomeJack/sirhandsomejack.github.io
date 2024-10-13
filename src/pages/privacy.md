@@ -56,6 +56,6 @@ This privacy policy can get updated at any time, we advise you to review this pa
 
 ## Contact Me
 
-If you have any questions or suggestions about our privacy policy, do not hesitate to contact me.
+If you have any questions about this Privacy Policy, You can contact me:
 
-See footer of the site for contact information.
+- By email: SirHandsomeJack@gmail.com

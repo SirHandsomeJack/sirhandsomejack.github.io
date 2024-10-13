@@ -19,6 +19,7 @@ export const footerData = {
   links: [],
   secondaryLinks: [{ text: 'Privacy Policy', href: getPermalink('/privacy') }],
   socialLinks: [
+    { ariaLabel: 'Email', icon: 'tabler:mail', href: 'mailto:SirHandsomeJack@gmail.com' },
     { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/sirhandsomejack' },
     { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://www.x.com/SirHandsomeJack' },
     { ariaLabel: 'YouTube', icon: 'tabler:brand-youtube', href: 'https://youtube.com/@SirHandsomeJack' },
