@@ -23,5 +23,5 @@ jobs:
         uses: keiranlovett/rss-feed-to-markdown@main
         with:
           feed_url: 'https://www.sirhandsomejack.com/blog-feed.xml'
-          template_file: 'assets/post-template.md'
-          output_dir: 'content/post'
+          template_file: 'src/assets/post-template.md'
+          output_dir: 'src/content/post'
