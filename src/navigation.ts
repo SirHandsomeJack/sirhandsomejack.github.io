@@ -1,8 +1,7 @@
-import { getPermalink, getAsset } from './utils/permalinks';
+import { getPermalink, getHomePermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
   links: [
-    /*
     {
       text: 'Home',
       href: getHomePermalink(),
@@ -11,7 +10,6 @@ export const headerData = {
       text: 'Blog',
       href: getBlogPermalink(),
     },
-    */
   ],
 };
 
@@ -27,5 +25,5 @@ export const footerData = {
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/SirHandsomeJack' },
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
   ],
-  footNote: `© 2024 Jack Young (SirHandsomeJack). All rights reserved.`,
+  footNote: `© 2024 Jack Young. All rights reserved.`,
 };
