@@ -1,5 +1,6 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
+import { getPermalink } from '~/utils/permalinks';
 
 import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
@@ -161,10 +162,9 @@ const metadata = {
       alt: 'Super Bunny Hop Logo',
     }}
     callToAction={{
-      target: '_blank',
       text: 'Go to the project',
       icon: 'tabler:chevron-right',
-      href: 'https://sirhandsomejack.com/superbunnyhop',
+      href: getPermalink('superbunnyhop'),
     }}
   >
     <Fragment slot="content">

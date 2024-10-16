@@ -1,0 +1,252 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+
+import Hero2 from '~/components/widgets/Hero2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+
+import Button from '~/components/ui/Button.astro';
+import Image from '~/components/common/Image.astro';
+import { YouTube } from 'astro-embed';
+
+//const appStoreImg = '~/assets/images/app-store.png';
+//const appStoreDownloadLink = 'https://github.com/onwidget/astrowind';
+
+const googlePlayImg = '~/assets/images/google-play.png';
+const googlePlayDownloadLink = 'https://play.google.com/store/apps/details?id=com.sirhandsomejack.superbunnyhop';
+
+const metadata = {
+  title: 'Super Bunny Hop',
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="announcement"></Fragment>
+  <Fragment slot="header">
+    <Header
+      position="left"
+      links={[
+        { text: 'Features', href: '#features' },
+        { text: 'Reviews', href: '#reviews' },
+        { text: 'FAQs', href: '#faqs' },
+      ]}
+      actions={[
+        {
+          text: 'Download',
+          href: '#download',
+        },
+      ]}
+      isSticky
+      showToggleTheme
+    />
+  </Fragment>
+
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero2 tagline="Mobile Game">
+    <Fragment slot="title">
+      <span class="text-accent dark:text-white highlight">Super Bunny Hop</span>:
+      <br />
+      how high can you hop?
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        Take control of the bunny and hop as high as you can by hopping on platforms, avoiding danger and collecting
+        items.
+      </span>
+      Get the game now for free and see how high you can hop!
+    </Fragment>
+
+    <div slot="actions" class="flex max-w-sm gap-4">
+      <!-- 
+      <Button variant="link" href={appStoreDownloadLink}>
+        <Image src={appStoreImg} alt="App Store Image" width={200} />
+      </Button>
+      -->
+      <Button variant="link" href={googlePlayDownloadLink}>
+        <Image src={googlePlayImg} alt="Google Play Image" width={200} />
+      </Button>
+    </div>
+
+    <div slot="image">
+      <YouTube id="Y18at6VVRYo" />
+    </div>
+  </Hero2>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    id="features"
+    items={[
+      {
+        title: 'HOP TO THE TOP',
+        description:
+          'An endless platformer with endless ambition. It takes a bunny with courage, determination and the love for hopping to overcome what lies above.',
+        icon: 'tabler:wand',
+      },
+      {
+        title: 'TRY NOT TO FALL',
+        description:
+          'You know what they say, what goes up <b>MUST</b> come down. In this case, you do not want to come down. Are bunnies afraid of heights? Hopefully we will not have to find out.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'ITEMS? WE GOT THAT TOO',
+        description:
+          'You will not be able to make it without the strategic planning, careful use and consumption of items as they drop across space and time. Just kidding, all you have to do is hit your head against the items to pickup and hope for the best!',
+        icon: 'tabler:template',
+      },
+    ]}
+    image={{
+      src: 'https://static.wixstatic.com/media/f7dba4_04b49fae3d3747b5b0374270b14533bf~mv2.gif',
+      alt: 'Brown Bunny',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Features</h3>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'DANGER',
+        description:
+          'You thought it was going to be easy? It is all fun and games until you hop into something you should not have. Be careful fellow bunny, may the hop be ever in your favour.',
+        icon: 'tabler:wifi-off',
+      },
+      {
+        title: 'CUSTOMISATION',
+        description:
+          'The fun does not stop here, you can even change the look of your bunny or the theme of the whole game! WOW, what does this game not do? Actually, do not answer that.',
+        icon: 'tabler:file-download',
+      },
+      {
+        title: 'TAKE CONTROL',
+        description:
+          'Choose how you want to play the game, whether it is by touching the screen or tilting the device. Play around and pick the best control scheme that suits you.',
+        icon: 'tabler:refresh',
+      },
+      {
+        title: 'LOVE NUMBERS?',
+        description: `Love numbers as much as i do? GREAT! You can look at lots of numbers by going to the statistics screen in the menu to view all sorts crazy things like how many games you played, your longest game time and much more!`,
+        icon: 'tabler:heart',
+      },
+    ]}
+    image={{
+      src: 'https://static.wixstatic.com/media/f7dba4_b47e7a99c34345ffb43be26c10337cb4~mv2.gif',
+      alt: 'Purple Bunny',
+    }}
+  />
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    id="reviews"
+    title="Reviews"
+    testimonials={[
+      {
+        testimonial: `Cute!!!!!!>.<`,
+        name: '박정근',
+        job: '★★★★★',
+        image: {
+          src: 'https://lh3.googleusercontent.com/a-/ALV-UjUCfAtagX_lqPWsVccnzNneDwY-NRCWbe6SxDZQDdR8RDOCoVhp',
+          alt: '박정근 Image',
+        },
+      },
+      {
+        testimonial: `I'm really enjoying this as my daily driver!`,
+        name: 'Aruna Naragude',
+        job: '★★★★★',
+        image: {
+          src: 'https://lh3.googleusercontent.com/a-/ALV-UjUX3HeCpAkILbR-XEW76JyUTQoyZCHtx_P8KsVdTK-YTMeX8Z8',
+          alt: 'Aruna Naragude Image',
+        },
+      },
+      {
+        testimonial: 'Very nice game',
+        name: 'Shorts Mania',
+        job: '★★★★★',
+        image: {
+          src: 'https://lh3.googleusercontent.com/a-/ALV-UjWO0SL56ZH0PJVtJSq6kwL5b2RsApm0w6Y0sRWolUSYIidqhmlM',
+          alt: 'Shorts Mania Image',
+        },
+      },
+      {
+        testimonial: 'Good app',
+        name: 'Md Nayan Chowdhury',
+        job: '★★★★★',
+        image: {
+          src: 'https://lh3.googleusercontent.com/a-/ALV-UjWn0fC7IRwC4nN2yjTdBJ7iZIiNij1T48piljHFB-75M2F6bOGH',
+          alt: 'Md Nayan Chowdhury Image',
+        },
+      },
+      {
+        testimonial: 'Easy to use. No complaints.',
+        name: 'Aashiq Khan',
+        job: '★★★★★',
+        image: {
+          src: 'https://lh3.googleusercontent.com/a-/ALV-UjWjcJK9zK_6iiDHiBE9nl1dm60NjlxaFmOb4yKFqoTHepdSczKO',
+          alt: 'Aashiq Khan Image',
+        },
+      },
+      {
+        testimonial: 'Fantastic game.',
+        name: 'Mad Max',
+        job: '★★★★★',
+        image: {
+          src: 'https://lh3.googleusercontent.com/a-/ALV-UjWAloc3JRuofJRE_1sGsKD04Gpld-wKEDhTrjWmgJMbRcMKXKE',
+          alt: 'Mad Max Image',
+        },
+      },
+    ]}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    id="faqs"
+    title="FAQs"
+    items={[
+      {
+        title: 'How to unlock more customisation?',
+        description:
+          'A number is shown on the locked customisation in the menu which is the high score you need to reach to unlock it. You can view your high score in the statistics screen.',
+      },
+    ]}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Statistics"
+    stats={[
+      { amount: '11K', icon: 'tabler:download' },
+      { amount: '3.8', icon: 'tabler:user-star' },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction id="download" title="Download" subtitle="Get the game now for free and see how high you can hop!">
+    <div slot="actions" class="flex max-w-sm gap-4">
+      <!--
+      <Button variant="link" href={appStoreDownloadLink}>
+        <Image src={appStoreImg} alt="App Store Image" width={200} />
+      </Button>
+      -->
+      <Button variant="link" href={googlePlayDownloadLink}>
+        <Image src={googlePlayImg} alt="Google Play Image" width={200} />
+      </Button>
+    </div>
+  </CallToAction>
+</Layout>

@@ -7,6 +7,19 @@ export const headerData = {
       href: getHomePermalink(),
     },
     {
+      text: 'Projects',
+      links: [
+        {
+          text: 'Little Sim World',
+          href: 'https://store.steampowered.com/app/1429880/Little_Sim_World/',
+        },
+        {
+          text: 'Super Bunny Hop',
+          href: getPermalink('superbunnyhop'),
+        },
+      ],
+    },
+    {
       text: 'Blog',
       href: getBlogPermalink(),
     },
