@@ -15,7 +15,7 @@ export const headerData = {
         },
         {
           text: 'Super Bunny Hop',
-          href: getPermalink('superbunnyhop'),
+          href: getPermalink('/superbunnyhop'),
         },
       ],
     },
