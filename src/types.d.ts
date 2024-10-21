@@ -212,6 +212,10 @@ export interface Form {
   description?: string;
 }
 
+export interface Adsense {
+  slot?: string;
+}
+
 // WIDGETS
 export interface Hero extends Omit<Headline, 'classes'>, Omit<Widget, 'isDark' | 'classes'> {
   content?: string;
