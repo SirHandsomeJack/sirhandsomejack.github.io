@@ -28,7 +28,7 @@ const image = (await findImage(post.image)) as ImageMetadata | string | undefine
 
 const metadata = merge(
   {
-    title: post.title,
+    title: `${post.title} — ${post.author}`,
     description: post.excerpt,
     robots: {
       index: blogPostRobots?.index,
