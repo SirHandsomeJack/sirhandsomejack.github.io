@@ -5,17 +5,18 @@ const { slot = '' } = Astro.props;
 ---
 
 {
-  slot &&
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <ins
-      class="adsbygoogle"
-      style="display:block"
-      data-ad-client="ca-pub-4767792886458221"
-      data-ad-slot={slot}
-      data-ad-format="auto"
-      data-full-width-responsive="true">
-    </ins>
-    <script is:inline>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
+  slot && (
+    <>
+      <script is:inline async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" />
+      <ins
+        class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-4767792886458221"
+        data-ad-slot={slot}
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      />
+      <script is:inline>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </>
+  )
 }
