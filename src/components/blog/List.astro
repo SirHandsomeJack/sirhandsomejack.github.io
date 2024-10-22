@@ -1,5 +1,7 @@
 ---
 import Item from '~/components/blog/ListItem.astro';
+import Adsense from '~/components/common/Adsense.astro';
+
 import type { Post } from '~/types';
 
 export interface Props {
@@ -10,6 +12,7 @@ const { posts } = Astro.props;
 ---
 
 <ul>
+  <Adsense slot="5944175568" />
   {
     posts.map((post) => (
       <li class="mb-4 md:mb-6 p-4 md:p-6 rounded-md shadow-xl dark:shadow-none dark:border dark:border-slate-600">
@@ -17,4 +20,5 @@ const { posts } = Astro.props;
       </li>
     ))
   }
+  <Adsense slot="5369460494" />
 </ul>
